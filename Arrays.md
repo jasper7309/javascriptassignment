@@ -1,0 +1,3 @@
+An array is a data structure that stores multiple values inside a single variable, organized in ordered positions called indexes
+Arrays are used because real world problems involve collections of data, not just single values
+imagine i wanted to store 1000 stdents names, without arrays i would need to create a thousand variables, which would make my code harder to manage. using arrays also makes it easier to loop through data. and supports better data organization
