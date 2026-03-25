@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM PART 2</title>
+</head>
+
+<body>
+
+
+  <h1 id="jasper" class="text">This is jasper!!</h1>
+
+
+  <p class="text">jasper loves writing code</p>
+
+  <button id="colorBtn">Change Background</button>
+
+ 
+  <input type="text" id="inputField" placeholder="Type something..." />
+  <p id="displayText"></p>
+
+  
+  <button id="toggleBtn">Toggle Message</button>
+  <p id="toggleText">This message can be hidden</p>
+
+<script>
+
+
+  document.getElementById("jasper").textContent =
+    "This is Jasper, he is a software engineer";
+
+ 
+  const texts = document.querySelectorAll(".text");
+
+  texts.forEach(el => {
+    el.style.color = "purple";
+  });
+
+  document.getElementById("colorBtn")
+    .addEventListener("click", function() {
+      document.body.style.backgroundColor = "green";
+    });
+
+  const input = document.getElementById("inputField");
+  const display = document.getElementById("displayText");
+
+  input.addEventListener("input", function() {
+    display.textContent = input.value;
+  });
+
+ 
+  const toggleBtn = document.getElementById("toggleBtn");
+  const toggleText = document.getElementById("toggleText");
+
+  toggleBtn.addEventListener("click", function() {
+    if (toggleText.style.display === "none") {
+      toggleText.style.display = "block";
+    } else {
+      toggleText.style.display = "none";
+    }
+  });
+
+</script>
+
+</body>
+</html>
